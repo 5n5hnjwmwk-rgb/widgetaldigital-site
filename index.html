@@ -16,13 +16,24 @@ body{
     color:#1d1d1f;
 }
 
-.container{
-    max-width:820px;
-    margin:auto;
-    padding:80px 20px;
+/* Hero header */
+
+.hero{
+    background: linear-gradient(
+        135deg,
+        #f5f7fa 0%,
+        #e9f2ff 40%,
+        #f5f5f7 100%
+    );
+    padding:100px 20px 80px;
 }
 
-h1{
+.hero-inner{
+    max-width:820px;
+    margin:auto;
+}
+
+.hero h1{
     font-size:42px;
     margin-bottom:8px;
 }
@@ -30,9 +41,18 @@ h1{
 .tagline{
     font-size:20px;
     color:#6e6e73;
-    margin-bottom:60px;
     max-width:560px;
 }
+
+/* Main container */
+
+.container{
+    max-width:820px;
+    margin:auto;
+    padding:60px 20px 80px;
+}
+
+/* App cards */
 
 .apps{
     display:grid;
@@ -52,14 +72,28 @@ h1{
     box-shadow:0 12px 28px rgba(0,0,0,.12);
 }
 
+/* App header with icon */
+
+.app-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.icon{
+    font-size:28px;
+}
+
 .app h2{
-    margin:0 0 10px 0;
+    margin:0;
 }
 
 .app p{
-    margin:0;
+    margin:12px 0 0;
     color:#555;
 }
+
+/* Buttons */
 
 .button{
     display:inline-block;
@@ -77,6 +111,8 @@ h1{
     background:#0064d6;
 }
 
+/* Footer */
+
 footer{
     margin-top:80px;
     color:#86868b;
@@ -89,32 +125,44 @@ footer{
 
 <body>
 
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Widgetal Digital</h1>
+    <p class="tagline">
+      Independent software studio building thoughtful utilities and apps.
+    </p>
+  </div>
+</div>
+
 <div class="container">
-
-<h1>Widgetal Digital</h1>
-
-<p class="tagline">
-Independent software studio building thoughtful utilities and apps.
-</p>
 
 <div class="apps">
 
 <div class="app">
-<h2>YAWA</h2>
-<p>Weather for people who care about weather.</p>
-<a class="button" href="#">View App</a>
+  <div class="app-header">
+    <span class="icon">🌦️</span>
+    <h2>YAWA</h2>
+  </div>
+  <p>Weather for people who care about weather.</p>
+  <a class="button" href="#">View App</a>
 </div>
 
 <div class="app">
-<h2>POS Calculator</h2>
-<p>Retail math made simple.</p>
-<a class="button" href="#">View App</a>
+  <div class="app-header">
+    <span class="icon">🧮</span>
+    <h2>POS Calculator</h2>
+  </div>
+  <p>Retail math made simple.</p>
+  <a class="button" href="#">View App</a>
 </div>
 
 <div class="app">
-<h2>MyLists</h2>
-<p>Fast voice-driven lists.</p>
-<a class="button" href="#">View App</a>
+  <div class="app-header">
+    <span class="icon">📝</span>
+    <h2>MyLists</h2>
+  </div>
+  <p>Fast voice-driven lists.</p>
+  <a class="button" href="#">View App</a>
 </div>
 
 </div>
