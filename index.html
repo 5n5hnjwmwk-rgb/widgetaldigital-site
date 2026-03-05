@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,8 @@
 body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     margin:0;
-    background:#fafafa;
-    color:#222;
+    background:#f5f5f7;
+    color:#1d1d1f;
 }
 
 .container{
@@ -22,26 +23,33 @@ body{
 }
 
 h1{
-    font-size:40px;
-    margin-bottom:10px;
+    font-size:42px;
+    margin-bottom:8px;
 }
 
 .tagline{
     font-size:20px;
-    color:#666;
+    color:#6e6e73;
     margin-bottom:60px;
+    max-width:560px;
 }
 
 .apps{
     display:grid;
-    gap:40px;
+    gap:36px;
 }
 
 .app{
-    padding:24px;
-    border-radius:12px;
+    padding:28px;
+    border-radius:14px;
     background:white;
-    box-shadow:0 3px 12px rgba(0,0,0,.06);
+    box-shadow:0 6px 18px rgba(0,0,0,.07);
+    transition:all .25s ease;
+}
+
+.app:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 28px rgba(0,0,0,.12);
 }
 
 .app h2{
@@ -53,13 +61,30 @@ h1{
     color:#555;
 }
 
+.button{
+    display:inline-block;
+    margin-top:16px;
+    padding:9px 16px;
+    border-radius:8px;
+    background:#007aff;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+}
+
+.button:hover{
+    background:#0064d6;
+}
+
 footer{
     margin-top:80px;
-    color:#777;
+    color:#86868b;
     font-size:14px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -69,7 +94,7 @@ footer{
 <h1>Widgetal Digital</h1>
 
 <p class="tagline">
-Apps, tools, and utilities built with care.
+Independent software studio building thoughtful utilities and apps.
 </p>
 
 <div class="apps">
@@ -77,16 +102,19 @@ Apps, tools, and utilities built with care.
 <div class="app">
 <h2>YAWA</h2>
 <p>Weather for people who care about weather.</p>
+<a class="button" href="#">View App</a>
 </div>
 
 <div class="app">
 <h2>POS Calculator</h2>
 <p>Retail math made simple.</p>
+<a class="button" href="#">View App</a>
 </div>
 
 <div class="app">
 <h2>MyLists</h2>
-<p>Fast lists with backup and restore.</p>
+<p>Fast voice-driven lists.</p>
+<a class="button" href="#">View App</a>
 </div>
 
 </div>
