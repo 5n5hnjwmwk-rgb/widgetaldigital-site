@@ -29,7 +29,7 @@ body{
 }
 
 .hero-inner{
-    max-width:820px;
+    max-width:980px;
     margin:auto;
 }
 
@@ -47,7 +47,7 @@ body{
 /* Main container */
 
 .container{
-    max-width:820px;
+    max-width:980px;
     margin:auto;
     padding:60px 20px 80px;
 }
@@ -56,15 +56,33 @@ body{
 
 .apps{
     display:grid;
-    gap:36px;
+    gap:20px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px){
+    .apps{
+        grid-template-columns: 1fr 1fr;
+        gap:22px;
+    }
+}
+
+@media (min-width: 1024px){
+    .apps{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:24px;
+    }
 }
 
 .app{
-    padding:28px;
+    padding:26px;
     border-radius:14px;
     background:white;
     box-shadow:0 6px 18px rgba(0,0,0,.07);
     transition:all .25s ease;
+    display:flex;
+    flex-direction:column;
+    min-height: 210px;
 }
 
 .app:hover{
@@ -93,22 +111,16 @@ body{
     color:#555;
 }
 
-/* Buttons */
+/* App Store badge */
 
-.button{
-    display:inline-block;
+.appstore{
     margin-top:16px;
-    padding:9px 16px;
-    border-radius:8px;
-    background:#007aff;
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:500;
+    height:40px;
 }
 
-.button:hover{
-    background:#0064d6;
+/* Push the badge to the bottom for consistent card alignment */
+.spacer{
+    flex: 1;
 }
 
 /* Footer */
@@ -144,7 +156,13 @@ footer{
     <h2>YAWA</h2>
   </div>
   <p>Weather for people who care about weather.</p>
-  <a class="button" href="#">View App</a>
+  <div class="spacer"></div>
+  <!-- TODO: Replace with the real App Store link when you have it -->
+  <a href="#" aria-label="YAWA on the App Store">
+    <img class="appstore"
+         src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+         alt="Available on the App Store">
+  </a>
 </div>
 
 <div class="app">
@@ -153,9 +171,14 @@ footer{
     <h2>POS Calculator</h2>
   </div>
   <p>Retail math made simple.</p>
-  <a href="https://apps.apple.com/app/poscalculator/id6757638867">
-<img class="appstore" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-</a>
+  <div class="spacer"></div>
+  <a href="https://apps.apple.com/app/poscalculator/id6757638867"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="POS Calculator on the App Store">
+    <img class="appstore"
+         src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+         alt="Available on the App Store">
+  </a>
 </div>
 
 <div class="app">
@@ -164,9 +187,14 @@ footer{
     <h2>MyLists</h2>
   </div>
   <p>Fast lists with backup.</p>
-  <a href="https://apps.apple.com/app/mylistapp/id6758252223">
-<img class="appstore" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-</a>
+  <div class="spacer"></div>
+  <a href="https://apps.apple.com/app/mylistapp/id6758252223"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="MyLists on the App Store">
+    <img class="appstore"
+         src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+         alt="Available on the App Store">
+  </a>
 </div>
 
 </div>
