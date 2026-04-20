@@ -173,13 +173,11 @@
         </p>
 
         <h2>4. Data Retention</h2>
-        <p>All stored information remains on your device until:</p>
+        <p>All stored information remains on your device until you choose to remove it.</p>
         <ul>
-          <li>You delete it</li>
-          <li>You clear the API key</li>
-          <li>You uninstall the App</li>
+          <li><strong>App preferences and cached weather data</strong> (stored in UserDefaults) are removed when you uninstall the App.</li>
+          <li><strong>Your API key</strong> (stored in iOS Keychain) may persist after uninstallation, as this is default iOS behavior for Keychain items. To ensure the API key is removed, use <strong>Settings → Clear API Key</strong> before uninstalling the App.</li>
         </ul>
-        <p>Uninstalling the App removes all locally stored data.</p>
 
         <h2>5. Security</h2>
         <p>The API key is stored securely using iOS Keychain services.</p>
