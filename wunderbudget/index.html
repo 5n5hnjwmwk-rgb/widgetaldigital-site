@@ -122,7 +122,14 @@
         <p>We do not use your financial data for advertising, profiling, or any purpose other than providing the budgeting service you have requested.</p>
 
         <h2>Plaid</h2>
-        <p>wunderBudget uses Plaid Technologies, Inc. to connect to your financial institutions. When you link a bank account, Plaid securely accesses your account data on your behalf. Plaid's collection and use of your information is governed by <a href="https://plaid.com/legal/#consumers" target="_blank">Plaid's Consumer Privacy Policy</a>. You can disconnect your bank accounts at any time from within the app, which will revoke wunderBudget's access to your data through Plaid.</p>
+        <p>wunderBudget uses Plaid Technologies, Inc. to connect to your financial institutions. When you link a bank account, Plaid presents its own consent screen explaining exactly what data wunderBudget is requesting before any access is granted. You must explicitly approve this access before Plaid shares any data with wunderBudget.</p>
+        <p>Plaid maintains a secure cache of your financial data to provide reliable access to your transaction history. This cached data is subject to Plaid's own retention and deletion policies, which are described in <a href="https://plaid.com/legal/#consumers" target="_blank">Plaid's Consumer Privacy Policy</a>.</p>
+        <p>You can view and manage all apps connected to your financial accounts, including wunderBudget, at <a href="https://my.plaid.com" target="_blank">my.plaid.com</a>. You have two ways to revoke wunderBudget's access to your financial data:</p>
+        <ul>
+            <li>Disconnect your bank account from within the wunderBudget app (Settings → bank account → Disconnect)</li>
+            <li>Revoke access directly through Plaid's consumer portal at <a href="https://my.plaid.com" target="_blank">my.plaid.com</a></li>
+        </ul>
+        <p>Either method will permanently terminate wunderBudget's ability to access your financial data through Plaid.</p>
 
         <h2>AWS Infrastructure</h2>
         <p>wunderBudget uses Amazon Web Services (AWS) to process and store your data securely. This includes:</p>
@@ -134,7 +141,7 @@
         <p>All data stored on AWS is encrypted at rest and in transit. Your data is stored in the United States.</p>
 
         <h2>AI Categorization</h2>
-        <p>wunderBudget uses Claude, an AI assistant made by Anthropic, to automatically categorize your transactions. Transaction titles and amounts are sent to our secure backend for categorization. No personally identifiable information beyond merchant names and amounts is used for this purpose. Anthropic's use of data submitted via API is governed by <a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic's Privacy Policy</a>.</p>
+        <p>wunderBudget uses Claude, an AI assistant made by Anthropic, to automatically categorize your transactions. Transaction titles and amounts are sent to our secure backend for categorization. No personally identifiable information beyond merchant names and amounts is used for this purpose. Anthropic's use of data submitted via API is governed by <a href="https://www.anthropic.ic/legal/privacy" target="_blank">Anthropic's Privacy Policy</a>.</p>
 
         <h2>Data Retention</h2>
         <p>Your transaction data and account information are retained for as long as your wunderBudget account is active. If you disconnect a bank account, the associated access credentials are permanently removed from our systems. You may request deletion of all your data at any time by contacting us at <a href="mailto:privacy@widgetaldigital.com">privacy@widgetaldigital.com</a>.</p>
