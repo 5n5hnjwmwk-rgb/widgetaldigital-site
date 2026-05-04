@@ -185,6 +185,102 @@ body{
     color:#a1a1a6;
 }
 
+/* wunderBudget coming soon card */
+
+.app.wunderbudget {
+    background: linear-gradient(145deg, #0a1628 0%, #0d2044 50%, #0a1e3d 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.app.wunderbudget::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(0, 122, 255, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.app.wunderbudget::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(52, 199, 89, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.app.wunderbudget:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 122, 255, 0.2);
+}
+
+.app.wunderbudget .app-header .icon {
+    font-size: 28px;
+}
+
+.app.wunderbudget h2 {
+    color: #ffffff;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+}
+
+.app.wunderbudget p {
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+}
+
+.coming-soon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    padding: 6px 12px;
+    background: rgba(0, 122, 255, 0.15);
+    border: 1px solid rgba(0, 122, 255, 0.35);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4da6ff;
+    letter-spacing: 0.02em;
+}
+
+.coming-soon-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4da6ff;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.wunderbudget-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.feature-tag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.01em;
+}
+
 /* Footer */
 
 footer{
@@ -316,6 +412,25 @@ footer{
              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
              alt="Available on the App Store">
       </a>
+    </div>
+
+    <div class="app wunderbudget">
+      <div class="app-header">
+        <span class="icon">💰</span>
+        <h2>wunderBudget</h2>
+      </div>
+      <p>Smart personal finance with real bank sync, AI-powered categorization, and a clear view of your complete financial life.</p>
+      <div class="wunderbudget-features">
+        <span class="feature-tag">Bank Sync</span>
+        <span class="feature-tag">AI Categorization</span>
+        <span class="feature-tag">Net Worth</span>
+        <span class="feature-tag">Budgeting</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="coming-soon-badge">
+        <span class="dot"></span>
+        Coming Soon
+      </div>
     </div>
 
   </div>
