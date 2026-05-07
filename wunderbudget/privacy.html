@@ -89,7 +89,7 @@
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: April 29, 2026</p>
+        <p class="updated">Last updated: May 7, 2026</p>
 
         <div class="highlight">
             wunderBudget does not sell your data. Your financial information is used solely to provide you with budgeting features and is never shared with advertisers or data brokers.
@@ -101,7 +101,7 @@
         <h2>Information We Collect</h2>
         <p>When you use wunderBudget, we collect the following information:</p>
         <ul>
-            <li><strong>Account information:</strong> Your email address, used to create and authenticate your wunderBudget account via Amazon Cognito.</li>
+            <li><strong>Account information:</strong> Your email address, used to create and authenticate your wunderBudget account via Amazon Cognito. Your email is stored exclusively within Cognito (encrypted at rest) and is never written to our application database — it is used solely for account verification, password resets, and two-factor authentication.</li>
             <li><strong>Bank account data:</strong> Account names, account types, and last-four digits of account numbers, provided by Plaid when you connect a financial institution.</li>
             <li><strong>Transaction data:</strong> Transaction dates, amounts, merchant names, and categories from your connected bank accounts, covering up to 90 days of history.</li>
             <li><strong>Budgeting data:</strong> Budget amounts, categories, and merchant rules you create within the app, stored in your account on AWS.</li>
@@ -130,9 +130,9 @@
         <h2>AWS Infrastructure</h2>
         <p>wunderBudget uses Amazon Web Services (AWS) to process and store your data securely. This includes:</p>
         <ul>
-            <li><strong>Amazon Cognito:</strong> Manages your account authentication</li>
+            <li><strong>Amazon Cognito:</strong> Manages your account authentication. Your email address is stored exclusively in Cognito, encrypted at rest using AES-256. The rest of our systems identify you only by an opaque unique identifier (UUID) — your email is never passed to our application database or included in logs.</li>
             <li><strong>AWS Lambda:</strong> Processes transaction data on your behalf</li>
-            <li><strong>Amazon DynamoDB:</strong> Stores your bank connection information and transaction sync state</li>
+            <li><strong>Amazon DynamoDB:</strong> Stores your bank connection information, budgeting data, and transaction sync state. Records are keyed by your unique identifier — no email address is stored here.</li>
         </ul>
         <p>All data stored on AWS is encrypted at rest and in transit. Your data is stored in the United States.</p>
 
